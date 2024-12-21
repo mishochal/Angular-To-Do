@@ -1,0 +1,64 @@
+.container {
+    padding: 20px 30px;
+    max-width: 1000px;
+    margin: 50px auto;
+    background-color: #333;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px 1px rgba(0, 0, 0, 0.3);
+    text-align: center;
+
+    h1 {
+        font-size: 40px;
+        color: chartreuse;
+        margin-bottom: 20px;
+    }
+
+    .add-task-container {
+        max-width: 50%;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin: auto;
+
+        input {
+            background-color: #555;
+            color: white;
+            flex: 1;
+            outline: none;
+        }
+
+        button {
+            color: white;
+            background-color: rgb(60, 88, 88);
+            cursor: pointer;
+            transition: background-color 0.2s ease-in;
+
+            &:hover {
+                background-color: rgb(86, 107, 107);
+            }
+        }
+
+        input,
+        button {
+            padding: 6px 12px;
+            border-radius: 5px;
+            border: 1px solid #999;
+            font-size: 16px;
+        }
+    }
+
+    .tasks {
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .task-container {
+            border-bottom: 1px solid #aaa;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}

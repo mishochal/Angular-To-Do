@@ -1,0 +1,14 @@
+<div class="container">
+    <h1>To-Do List</h1>
+    <div class="add-task-container">
+        <input type="text" name="new-task" id="new-task" placeholder="Add New Task" (keyup.enter)="addNewTask()"
+            [(ngModel)]="newTask">
+        <button (click)="addNewTask()">Add Task</button>
+    </div>
+
+    <div class="tasks">
+        <div class="task-container" *ngFor="let task of tasks">
+            <app-task [task]="task" (toggle)="toggleTask($event)" (delete)="deleteTask($event)"></app-task>
+        </div>
+    </div>
+</div>

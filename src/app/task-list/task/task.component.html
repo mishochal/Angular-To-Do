@@ -1,0 +1,7 @@
+<div class="container">
+    <div class="left">
+        <input type="checkbox" (change)="toggleTask()" [checked]="task.completed">
+        <p [ngClass]="{'completed' : task.completed}" class="task">{{ task.task }}</p>
+    </div>
+    <div class="delete-btn" (click)="deleteTask()"></div>
+</div>

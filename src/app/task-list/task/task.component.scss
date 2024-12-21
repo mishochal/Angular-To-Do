@@ -1,0 +1,62 @@
+.container {
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        input {
+            width: 20px;
+            height: 20px;
+        }
+
+        .task {
+            font-size: 18px;
+            color: white;
+
+            &.completed {
+                text-decoration: line-through;
+                color: #aaa;
+            }
+        }
+    }
+
+    .delete-btn {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: calc(100% * 1.4142);
+            background-color: red;
+            height: 5px;
+            border-radius: 15px;
+            transform-origin: left center;
+            transition: background-color 0.2s ease-in;
+        }
+
+        &::before {
+            top: -2.5px;
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            bottom: -2.5px;
+            transform: rotate(-45deg);
+        }
+
+        &:hover::before,
+        &:hover::after {
+            background-color: rgb(167, 0, 0);
+        }
+    }
+}
